@@ -31,11 +31,6 @@ function init() {
         },
         {
             type: 'input',
-            message: 'Table of Contents',
-            name: 'Table of Contents',
-        },
-        {
-            type: 'input',
             message: 'Installation',
             name: 'Installation',
         },
@@ -46,9 +41,9 @@ function init() {
         },
         {
             type: 'list',
-            name: 'licence',
-            message: 'licence',
-            choices: ['Apache 2.0', 'Boost', 'BSD']
+            name: 'License',
+            message: 'License',
+            choices: ['Apache 2.0', 'Boost', 'MIT']
         },
         {
             type: 'input',
