@@ -3,13 +3,13 @@
 function renderLicenseBadge(license) {
   switch(license) {
     case `MIT`:
-      return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
+      return `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
       break;
     case "Apache 2.0":
-      return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`
+      return `![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`
       break;
     case `Boost`:
-      return `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)`
+      return `![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)`
       break;
     default:
       ``
@@ -303,7 +303,7 @@ function generateMarkdown(data) {
   ${renderLicenseBadge(data.License)}
   # ${data.Title}
 
-  ##Table Of Contents
+  ## Table Of Contents
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
@@ -313,25 +313,25 @@ function generateMarkdown(data) {
   * [Questions](#questions)
 
 
-  ##Description
+  ## Description 
  ${data.Description}
 
-  ##Installation
+  ## Installation
   ${data.Installation}
 
-  ##Usage
+  ## Usage
   ${data.Usage}
 
-  ##License
+  ## License
   ${renderLicenseLink(data.License)}
 
-  ##Contributing
+  ## Contributing
   ${data.Contributing}
 
-  ##Tests
+  ## Tests
   ${data.Tests}
 
-  ##Questions
+  ## Questions
   ${data.Questions}
 `;
 }
