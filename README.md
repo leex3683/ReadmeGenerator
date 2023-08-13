@@ -13,10 +13,10 @@
 
 
   ## Description 
- This is a program that creates a readme file by using node. 
+  This is a program that creates a readme file by using node. Inquirer 8.2.4 required.
 
   ## Installation
-  Download the repo
+  To install, simply download the repo and then install inquirer 8.2.4.
 
   ## Usage
   Run index.js in node, and follow the prompts to construct your readme file.
@@ -28,7 +28,7 @@
   Michael Lee
 
   ## Tests
-  Several tests were conducted to ensure the program works appropriately
+  N/A
 
   ## Questions
-  Do you like it?
+  N/A
