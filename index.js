@@ -63,7 +63,7 @@ function init() {
     ])
     .then((response) =>
     // md.generateMarkdown(response)
-    writeToFile(`${response.Title}.md`, md(response))
+    writeToFile(`README.md`, md(response))
     );
 
 }
