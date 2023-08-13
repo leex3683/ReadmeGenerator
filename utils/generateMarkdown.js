@@ -38,7 +38,6 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
 
-  function renderLicenseLink(license) {
     switch(license) {
       case `MIT`:
         `Copyright (c) 2012-2023 Scott Chacon and others
@@ -292,7 +291,7 @@ function renderLicenseSection(license) {
         break;
       default:
         ``
-    }
+
   }
   
 }
