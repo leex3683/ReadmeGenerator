@@ -2,6 +2,8 @@
   [<img src="https://img.shields.io/badge/License-MIT-yellow.svg">](https://opensource.org/licenses/MIT)
   # ReadmeGenerator
 
+![Example](img/Demo.gif)
+
   ## Table Of Contents
   * [Description](#description)
   * [Installation](#installation)
