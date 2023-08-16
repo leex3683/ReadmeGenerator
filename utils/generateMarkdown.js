@@ -3,13 +3,13 @@
 function renderLicenseBadge(license) {
   switch(license) {
     case `MIT`:
-      return `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
+      return `[<img src="https://img.shields.io/badge/License-MIT-yellow.svg">]`
       break;
     case "Apache 2.0":
-      return `![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`
+      return `[<img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg">]`
       break;
     case `Boost`:
-      return `![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)`
+      return `[<img src="https://img.shields.io/badge/License-Boost_1.0-lightblue.svg">]`
       break;
     default:
       ``
@@ -36,11 +36,11 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
+function renderLicenseSection(license,Contributing) {
 
     switch(license) {
       case `MIT`:
-        `Copyright (c) 2012-2023 Scott Chacon and others
+        return `Copyright (c) 2023 ${Contributing} and others
 
     Permission is hereby granted, free of charge, to any person obtaining
     a copy of this software and associated documentation files (the
@@ -62,7 +62,7 @@ function renderLicenseSection(license) {
     WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`
         break;
       case "Apache 2.0":
-        `  Apache License
+        return `  Apache License
         Version 2.0, January 2004
      http://www.apache.org/licenses/
     
@@ -265,7 +265,7 @@ function renderLicenseSection(license) {
     limitations under the License.`
         break;
       case `Boost`:
-        `Boost Software License - Version 1.0 - August 17th, 2003
+        return `Boost Software License - Version 1.0 - August 17th, 2003
 
         Permission is hereby granted, free of charge, to any person or organization
         obtaining a copy of the software and accompanying documentation covered by
@@ -299,7 +299,7 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
-  ${renderLicenseBadge(data.License)}
+  ${renderLicenseBadge(data.License)}${renderLicenseLink(data.License)}
   # ${data.Title}
 
   ## Table Of Contents
@@ -322,7 +322,8 @@ function generateMarkdown(data) {
   ${data.Usage}
 
   ## License
-  ${renderLicenseLink(data.License)}
+  ${data.License}
+  ${renderLicenseSection(data.License,data.Contributing)}
 
   ## Contributing
   ${data.Contributing}
@@ -331,7 +332,8 @@ function generateMarkdown(data) {
   ${data.Tests}
 
   ## Questions
-  ${data.Questions}
+  Please send any questions to ${data.Questions}
+  Find my GitHub [here](https://github.com/${data.Github})
 `;
 }
 

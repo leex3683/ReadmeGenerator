@@ -57,8 +57,14 @@ function init() {
         },       
         {
             type: 'input',
-            message: 'Questions',
+            message: 'Enter your email for the questions section',
             name: 'Questions',
+        },
+
+        {
+            type: 'input',
+            message: 'Enter your github username',
+            name: 'Github',
         },
     ])
     .then((response) =>
